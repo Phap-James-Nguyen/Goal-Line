@@ -1,19 +1,23 @@
 import cv2
 from ultralytics import YOLO
 
-framesProcessed = 0.0
-framesWBall = 0.0
+
 # Load the trained YOLOv8 model
-model = YOLO("best4.pt")
+model = YOLO("Weights/best4.pt")
 print(model.names)  # Prints a dictionary mapping class IDs to class names
 
 # Open the video file
-cap = cv2.VideoCapture("video3.mp4")
+vid_path = "../Videos/video2.mp4" # Path to **test** video
+cap = cv2.VideoCapture(vid_path) # Change to 0 for camera 
 
 # Check if the video opened successfully
 if not cap.isOpened():
     print("Error: Could not open video.")
     exit()
+
+# Variables for stats #
+framesProcessed = 0.0
+framesWBall = 0.0
 
 while True:
     ret, frame = cap.read()
@@ -46,10 +50,8 @@ while True:
     if(framesProcessed == 45):
         break;
  
-accuracy = (framesWBall/ framesProcessed)*100
+
 print(f"{framesWBall} Frames with ball and {framesProcessed} Frames Processed") 
-print(f"Estimated Accuracy = {accuracy}")
 # Release resources
 cap.release()
-out.release()
 cv2.destroyAllWindows()
