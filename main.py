@@ -5,10 +5,10 @@ from ultralytics import YOLO
 ###PROGRAM PARAMETERS####
 drawLine = 0xFF #Booleans
 writeVid = 0x00
-modelName = "best4.pt" #model name
+modelName = "bestCustom.pt" #model name
 pt1 = (388, 842) # endpoint1 of line
 pt2 = (384, 1277) # endpoint2 of line
-videoName = "video2.mp4" #video name, cam for live
+videoName = "video0.mp4" #video name, cam for live
 thres = 0.4 # confidence thres for detection
 
 # === Utility for side check ===
