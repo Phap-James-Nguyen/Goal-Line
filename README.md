@@ -12,9 +12,7 @@ We're training our models using a custom dataset hosted on Roboflow:
 
 ### 📌 Features (Coming Soon)
 - Real-time ball tracking using YOLO-based models
-- Goal-line detection using spatial analysis
-- High frame rate video processing
-- Cross-platform compatibility
+- High frame rate video processing. (Currently 24 FPS on Jetson Orin Nano)
 - Cost-effective hardware design
 - Real time communication 
 
