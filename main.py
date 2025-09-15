@@ -3,16 +3,16 @@ from ultralytics import YOLO
 
 
 ###PROGRAM PARAMETERS####
-drawLine = 0xFF #Booleans
-writeVid = 0x00
-modelName = "bestCustom.pt" #model name
+drawLine = False #Booleans
+writeVid = False
+modelName = "customV1.pt" #model name
 pt1 = (388, 842) # endpoint1 of line
 pt2 = (384, 1277) # endpoint2 of line
-videoName = "video0.mp4" #video name, cam for live
-thres = 0.4 # confidence thres for detection
+videoName = "cam" #video name, cam for live
+thres = 0.7 # confidence thres for detection
 
 # === Utility for side check ===
-def is_goal(ball_pos, pt1, pt2):
+def is_goal(ball_pos, pt1, pt2,radius):
     bx, by = ball_pos
     bx = bx + radius #Rightmost point
     x1, y1 = pt1
@@ -74,7 +74,7 @@ while True:
                             cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
                 # Check for goal
-                if is_goal((center_x, center_y), pt1, pt2):
+                if is_goal((center_x, center_y), pt1, pt2,radius):
                     cv2.putText(frame, "GOAL!", (center_x, center_y + 40),
                                 cv2.FONT_HERSHEY_DUPLEX, 1.2, (0, 0, 255), 3)
                     print("GOAL!")
@@ -90,5 +90,4 @@ while True:
         break
 
 cap.release()
-# out.release()
 cv2.destroyAllWindows()
