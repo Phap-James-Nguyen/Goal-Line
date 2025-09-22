@@ -18,7 +18,7 @@ We're training our models using a custom dataset hosted on Roboflow:
 
 ## 🧠 Team
 Developed by:  
-Diego Perez Sanchez, Dwayne Bass, Luis Chica, Phap Nguyen, Vily Dubon, Jungmin Kim
+Diego Perez Sanchez, Dwayne Bass, Luis Chica, Phap Nguyen, Vily Dubon, Jungmin Kim, Steven Alexander Clarke
 
 ## 📄 License
 This work is licensed under  
