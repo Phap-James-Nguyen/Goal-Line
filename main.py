@@ -3,13 +3,17 @@ from ultralytics import YOLO
 
 
 ###PROGRAM PARAMETERS####
+modelName = "GoalLine_V1.pt" #model name
+videoName = "video4.mov" #video name, cam for live
+
+thres = 0.6 # confidence thres for detection
+
 drawLine = False #Booleans
 writeVid = False
-modelName = "customV1.pt" #model name
+
 pt1 = (388, 842) # endpoint1 of line
 pt2 = (384, 1277) # endpoint2 of line
-videoName = "cam" #video name, cam for live
-thres = 0.7 # confidence thres for detection
+
 
 # === Utility for side check ===
 def is_goal(ball_pos, pt1, pt2,radius):
