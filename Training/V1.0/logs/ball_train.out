@@ -1,0 +1,127 @@
+New https://pypi.org/project/ultralytics/8.3.115 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.3.93 🚀 Python-3.9.9 torch-1.12.1+cu113 CUDA:0 (NVIDIA A100-SXM4-80GB MIG 1g.10gb, 9728MiB)
+WARNING ⚠️ Upgrade to torch>=2.0.0 for deterministic training.
+[34m[1mengine/trainer: [0mtask=detect, mode=train, model=yolov8s.pt, data=/home/dperezs/Workspace/SeniorDesign/CustomV1/data.yaml, epochs=50, time=None, patience=7, batch=16, imgsz=640, save=True, save_period=-1, cache=False, device=None, workers=8, project=runs/train, name=ballV1, exist_ok=False, pretrained=True, optimizer=SGD, verbose=True, seed=0, deterministic=True, single_cls=True, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=True, opset=None, workspace=None, nms=False, lr0=0.001, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, copy_paste_mode=flip, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/train/ballV1
+Overriding class names with single class.
+Overriding model.yaml nc=80 with nc=1
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       928  ultralytics.nn.modules.conv.Conv             [3, 32, 3, 2]                 
+  1                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
+  2                  -1  1     29056  ultralytics.nn.modules.block.C2f             [64, 64, 1, True]             
+  3                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
+  4                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
+  5                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  6                  -1  2    788480  ultralytics.nn.modules.block.C2f             [256, 256, 2, True]           
+  7                  -1  1   1180672  ultralytics.nn.modules.conv.Conv             [256, 512, 3, 2]              
+  8                  -1  1   1838080  ultralytics.nn.modules.block.C2f             [512, 512, 1, True]           
+  9                  -1  1    656896  ultralytics.nn.modules.block.SPPF            [512, 512, 5]                 
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 12                  -1  1    591360  ultralytics.nn.modules.block.C2f             [768, 256, 1]                 
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 15                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
+ 16                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 18                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
+ 19                  -1  1    590336  ultralytics.nn.modules.conv.Conv             [256, 256, 3, 2]              
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 21                  -1  1   1969152  ultralytics.nn.modules.block.C2f             [768, 512, 1]                 
+ 22        [15, 18, 21]  1   2116435  ultralytics.nn.modules.head.Detect           [1, [128, 256, 512]]          
+Model summary: 129 layers, 11,135,987 parameters, 11,135,971 gradients, 28.6 GFLOPs
+
+Transferred 349/355 items from pretrained weights
+Freezing layer 'model.22.dfl.conv.weight'
+[34m[1mAMP: [0mrunning Automatic Mixed Precision (AMP) checks...
+[34m[1mAMP: [0mchecks passed ✅
+[34m[1mtrain: [0mWARNING ⚠️ /home/dperezs/Workspace/SeniorDesign/CustomV1/train/images/frame_01461_png.rf.01611793688c1dc25b15601896c7bb02.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /home/dperezs/Workspace/SeniorDesign/CustomV1/train/images/frame_01461_png.rf.2102b7e4c8474082041b1ad9474edd2f.jpg: 1 duplicate labels removed
+[34m[1mtrain: [0mWARNING ⚠️ /home/dperezs/Workspace/SeniorDesign/CustomV1/train/images/frame_01461_png.rf.5462c121b1bbca9077c99eeaa9d98615.jpg: 1 duplicate labels removed
+WARNING ⚠️ Box and segment counts should be equal, but got len(segments) = 18, len(boxes) = 3726. To resolve this only boxes will be used and all segments will be removed. To avoid this please supply either a detect or segment dataset, not a detect-segment mixed dataset.
+Plotting labels to runs/train/ballV1/labels.jpg... 
+[34m[1moptimizer:[0m SGD(lr=0.001, momentum=0.937) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
+Image sizes 640 train, 640 val
+Using 8 dataloader workers
+Logging results to [1mruns/train/ballV1[0m
+Starting training for 50 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.969      0.925      0.964      0.688
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.963      0.962      0.988      0.713
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.971      0.976      0.982      0.714
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.957      0.977      0.978      0.721
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.991      0.979      0.993      0.735
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.977      0.986       0.99      0.752
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.977      0.983      0.991      0.758
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.974      0.982       0.99      0.755
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.974      0.983      0.992       0.76
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.974      0.982      0.992      0.762
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.973       0.98      0.993      0.762
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.983      0.976      0.988      0.764
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.988      0.979      0.992      0.782
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.985      0.976       0.99      0.764
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.978       0.98      0.988      0.773
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346       0.98      0.979      0.992      0.775
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.979       0.98      0.984      0.761
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.982      0.983      0.993       0.78
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.979      0.977      0.991      0.778
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+                   all        316        346      0.983       0.98      0.992      0.773
+[34m[1mEarlyStopping: [0mTraining stopped early as no improvement observed in last 7 epochs. Best results observed at epoch 13, best model saved as best.pt.
+To update EarlyStopping(patience=7) pass a new patience value, i.e. `patience=300` or use `patience=0` to disable EarlyStopping.
+
+20 epochs completed in 0.340 hours.
+Optimizer stripped from runs/train/ballV1/weights/last.pt, 22.5MB
+Optimizer stripped from runs/train/ballV1/weights/best.pt, 22.5MB
+
+Validating runs/train/ballV1/weights/best.pt...
+Ultralytics 8.3.93 🚀 Python-3.9.9 torch-1.12.1+cu113 CUDA:0 (NVIDIA A100-SXM4-80GB MIG 1g.10gb, 9728MiB)
+Model summary (fused): 72 layers, 11,125,971 parameters, 0 gradients, 28.4 GFLOPs
+                   all        316        346      0.988      0.979      0.992      0.783
+Speed: 0.6ms preprocess, 8.5ms inference, 0.0ms loss, 0.7ms postprocess per image
+Results saved to [1mruns/train/ballV1[0m
+Ultralytics 8.3.93 🚀 Python-3.9.9 torch-1.12.1+cu113 CUDA:0 (NVIDIA A100-SXM4-80GB MIG 1g.10gb, 9728MiB)
+Model summary (fused): 72 layers, 11,125,971 parameters, 0 gradients, 28.4 GFLOPs
+                   all        316        346      0.988      0.979      0.992      0.785
+Speed: 0.5ms preprocess, 11.2ms inference, 0.0ms loss, 0.4ms postprocess per image
+Results saved to [1mruns/train/ballV12[0m
+mAP50: 0.9924
+mAP50-95: 0.7852
