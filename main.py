@@ -4,7 +4,7 @@ from ultralytics import YOLO
 
 ###PROGRAM PARAMETERS####
 modelName = "GoalLine_V1.pt" #model name
-videoName = "video4.mov" #video name, cam for live
+videoName = "video2.mp4" #video name, cam for live
 
 thres = 0.6 # confidence thres for detection
 
